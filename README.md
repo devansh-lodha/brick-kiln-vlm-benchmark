@@ -2,19 +2,17 @@
 
 > ### A Note on Reproducibility and Usage
 >
-> This repository serves as a **reference implementation** and a detailed showcase of the methodology presented in the Master's thesis by Shataxi Dubey. The code has been refactored and organized from the original experimental Jupyter notebooks for clarity and to present a clean project structure.
+> This repository serves as a **reference implementation** and a detailed showcase of the methodology we used. The code has been refactored and organized from the original experimental Jupyter notebooks for clarity and to present a clean project structure.
 >
 > **This is not a 'plug-and-play' solution.** You should expect to adapt the code to your own environment and data. Specifically:
 >
 > *   **Data is Not Included:** The satellite imagery and corresponding labels used in the research are not part of this repository. All file paths in the configuration files (`configs/`) are placeholders and must be updated.
-> *   **Environment Sensitivity:** Fine-tuning large models is highly dependent on the specific hardware (GPU type), CUDA version, and library versions. The included `requirements.txt` provides a snapshot of the environment used, but you may need to resolve dependency conflicts for your specific setup.
-> *   **Conceptual Data Scripts:** The data processing scripts in `src/data/` are provided to illustrate the required data transformation pipeline (e.g., converting YOLO-OBB to COCO). They will require your specific data to be fully functional.
->
-> Think of this repository as a **blueprint for the research**, designed to be clear, understandable, and adaptable, rather than a production-ready application.
+> *   **Environment Sensitivity:** Fine-tuning large models is highly dependent on the specific hardware (GPU type), CUDA version, and library versions. You may need to resolve dependency conflicts for your specific setup.
+> *   **Conceptual Data Scripts:** The data processing scripts in `src/data/` are provided to illustrate the required data transformation pipeline (e.g., converting YOLO-OBB to COCO). They will require your specific data to be fully functional. The parsing code may vary.
 
 ---
 
-**Read the full story on our [Blog Post](link-to-your-blog-post.com)!**
+**Read the [Blog Post](https://devansh-lodha.github.io/blog/posts/brick-kiln-vlm-benchmark/brick-kiln-vlm-benchmark.html)!**
 
 ### Abstract
 
