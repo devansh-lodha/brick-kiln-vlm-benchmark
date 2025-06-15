@@ -1,0 +1,30 @@
+# configs/finetune_paligemma.yml
+# Configuration for fine-tuning a PaliGemma model using Maestro
+
+model_family: "paligemma"
+model_id: "google/paligemma-3b-pt-448"
+
+# --- Dataset Paths ---
+# The dataset should be in JSONL format for PaliGemma.
+dataset: "/path/to/your/jsonl_formatted_dataset"
+
+# --- Training Hyperparameters ---
+epochs: 50
+lr: 2.0e-5
+batch_size: 4
+val_batch_size: 4
+accumulate_grad_batches: 4
+num_workers: 8
+optimization_strategy: "lora"
+max_new_tokens: 256
+
+# --- PEFT (LoRA) Advanced Parameters ---
+peft_advanced_params:
+  r: 8
+  lora_alpha: 8
+  lora_dropout: 0.05
+  
+# --- Output and Logging ---
+output_dir: "training_output/paligemma_lucknow_finetune"
+log_every_n_steps: 10
+metrics: ["edit_distance"]

@@ -1,0 +1,29 @@
+# Core PyTorch and VLM Libraries
+torch
+transformers
+peft
+bitsandbytes
+accelerate
+
+# VLM Fine-tuning Frameworks
+maestro-roboflow # For Florence-2 and PaliGemma
+unsloth # For Qwen2.5-VL
+
+# Baseline Object Detection
+ultralytics
+
+# Inference and Data Handling
+supervision
+sahi
+pyyaml
+
+# Data Processing and Geospatial
+pandas
+geopandas
+leafmap
+rioxarray
+rasterio
+
+# Visualization
+matplotlib
+seaborn

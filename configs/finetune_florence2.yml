@@ -1,0 +1,30 @@
+# configs/finetune_florence2.yml
+# Configuration for fine-tuning a Florence-2 model using Maestro
+
+model_family: "florence2"
+model_id: "microsoft/Florence-2-large-ft"
+
+# --- Dataset Paths ---
+# The dataset should be in COCO format.
+dataset: "/path/to/your/coco_formatted_dataset" # Directory containing train/valid/test splits
+
+# --- Training Hyperparameters ---
+epochs: 50
+lr: 5.0e-6
+batch_size: 4
+val_batch_size: 4
+accumulate_grad_batches: 2
+num_workers: 8
+optimization_strategy: "lora" # Use LoRA for parameter-efficient fine-tuning
+max_new_tokens: 1024
+
+# --- PEFT (LoRA) Advanced Parameters ---
+peft_advanced_params:
+  r: 8
+  lora_alpha: 8
+  lora_dropout: 0.05
+  
+# --- Output and Logging ---
+output_dir: "training_output/florence2_lucknow_finetune"
+log_every_n_steps: 10
+metrics: ["mean_average_precision"]
